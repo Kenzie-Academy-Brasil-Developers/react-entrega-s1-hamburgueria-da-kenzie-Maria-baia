@@ -25,6 +25,11 @@ function showProducts(){
 }
 
 function handleClick(newId) {
+  for(let i=0; i<currentSale.length; i++){
+    if(currentSale[i].id === newId){
+      return currentSale
+    }
+  }
   setCurrentSale([...currentSale,
     products.find((product) => product.id === newId)
   ])
